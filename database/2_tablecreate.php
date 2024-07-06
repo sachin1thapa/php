@@ -7,10 +7,10 @@ if(!$conn){
 
 $sql = "CREATE TABLE StudentDetails(
     id INT PRIMARY KEY ,
-    firstName varchar(20) not null,
-    lastName varchar(20) not null,
-    faculty varchar(10) not null,
-    sem int not null,
+    firstName  VARCHAR(20) NOT NULL,
+    lastName VARCHAR(20) NOT NULL,
+    faculty VARCHAR(10) NOT NULL,
+    sem INT NOT NULL
 )";
 
 if(mysqli_query($conn , $sql)){
