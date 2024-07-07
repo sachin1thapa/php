@@ -27,6 +27,7 @@ if (mysqli_query($conn, $sql)) {
 }
 
 }
+mysqli_close($conn);
 
 ?>
 
@@ -52,11 +53,36 @@ if (mysqli_query($conn, $sql)) {
 
         <input type="submit" value="Submit">
     </form>
+
+
+    <table>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Faculty</th>
+            <th>Semester</th>
+        </tr>
+        <?php
+        $conn = mysqli_connect("localhost", "root", "", "form");
+        if(!$conn){
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        $sql = "SELECT * FROM studentdetails";
+        $result = mysqli_query($conn, $sql);
+        if(mysqli_num_rows($result)>0){
+            while($ans = mysqli_fetch_assoc($result)){
+                echo "<tr>";
+                echo "<td>".$ans['firstname']."</td>";
+                echo "<td>".$ans['lastname']."</td>";
+                echo "<td>".$ans['faculty']."</td>";
+                echo "<td>".$ans['semester']."</td>";
+                echo "</tr>";
+            }
+        }
+        mysqli_close($conn);
+        ?>
+
 </body>
 
 </html>
 
-<?php
-// Close the connection
-mysqli_close($conn);
-?>
