@@ -6,7 +6,7 @@ if(!$conn){
 }
 
 $sql = "CREATE TABLE StudentDetails(
-    id INT PRIMARY KEY ,
+    id INT PRIMARY KEY,
     firstName  VARCHAR(20) NOT NULL,
     lastName VARCHAR(20) NOT NULL,
     faculty VARCHAR(10) NOT NULL,
