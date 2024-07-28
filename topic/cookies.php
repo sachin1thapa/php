@@ -7,7 +7,7 @@
 
 
 // create a cookies
-// setcookie(name, value, expire, path, domain, secure, httponly);
+// setcookie(name, value, expires, path, domain, secure, httponly);
 
 // name is only required parameter
 

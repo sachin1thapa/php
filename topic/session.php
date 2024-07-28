@@ -39,7 +39,7 @@ session_unset();  //* remove all session variables
 session_destroy();  //* destroy the session
 
 
-if(!isset($_SESSION)){
+if(isset($_SESSION)){
     echo "Your name  is " . $_SESSION["name"] . ".<br>";
     echo "and age  is " . $_SESSION["age"] . ".";
 }else{

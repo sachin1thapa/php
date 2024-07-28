@@ -27,7 +27,7 @@ class student{
 
 // object  => object are the individual instance of the class 
 
-$st1 = new student;
-$st1->setvalue("ram" , 3 , "bca");
-$st1->setvalue("sachin" , 23 , "csit");
+$st1 = new student('ram' , 23 , 'bca');
+// $st1->setvalue("ram" , 3 , "bca");
+// $st1->setvalue("sachin" , 23 , "csit");
 $st1->display();

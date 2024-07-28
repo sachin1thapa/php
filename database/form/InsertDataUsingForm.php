@@ -9,7 +9,7 @@ $conn = mysqli_connect("localhost" ,$username , $password , $db );
 if(!$conn){
     die("Connection failed: " . mysqli_connect_error());
 }
-if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['submit'])) {
     
         $fname = $_POST['fname'];
         $lname = $_POST['lname'];
